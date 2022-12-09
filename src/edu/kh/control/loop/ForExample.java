@@ -134,20 +134,61 @@ public class ForExample {
 	}
 	
 	public void ex10() {
-		for(int i = 1; i <=5; i++ ) { //단
-			for(int n =1; n <=5; n++) { //줄
+		for(int i = 1; i <= 5; i++ ) { //단
+			for(int n = 1; n <= 5; n++) { //줄
 				System.out.print(n);
 			}
 			System.out.println();
 		} 
 		System.out.println();
-		for(int i = 1; i <=3; i++) { //단
+		for(int i = 1; i <= 3; i++) { //단
 			for(int n = 5; n >= 1; n--) { //줄
 				System.out.print(n);
 			}
 			System.out.println();
 		}
 	}
+
+	public void ex11() {
+	/* 	for(int a = 1; a <=1; a++) {
+			System.out.print(a);
+			for(int b = 1; b <=2; b++) {
+				System.out.print(b);
+				for(int c = 1; c <=3; c++) {
+					System.out.print(c);
+					for(int d = 1; d <=4; d++) {
+						System.out.print(d);
+					}
+					System.out.println();
+				}
+			}*/
+		
+		/*
+				1
+				12
+				123
+				1234
+				-----------------
+				4321
+				321
+				21
+				1  */
+		
+		for (int x = 1; x <= 4; x++) {
+			for(int i = 1; i <= x; i++) {
+				System.out.print(i);
+			}
+			System.out.println();
+		}
+		System.out.println("-----------------");
+		
+		for(int x = 4; x >= 1; x--) {
+			for(int i = x; i >= 1; i--) {
+				System.out.print(i);			
+			}
+			System.out.println();
+		}
+}
 }
 
 
