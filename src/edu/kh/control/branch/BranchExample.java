@@ -42,8 +42,8 @@ public class BranchExample {
 		//continue: 다음 반복으로 넘어감
 		//3의 배수 제외하고 1~10까지 출력
 		
-		for (int i =1; i <= 10; i++) {
-			if(i%3 ==0) {
+		for (int i = 1; i <= 30; i++) {
+			if(i % 3 ==0) {
 				continue;
 			}
 			System.out.print(i+" ");

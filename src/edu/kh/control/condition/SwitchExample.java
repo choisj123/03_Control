@@ -85,8 +85,7 @@ public class SwitchExample {
 			System.out.print("연산자: ");
 			String operator = sc.next(); //char->는 next로 못받음 next는 string
 			
-			int result;
-			String results;
+			int result = 0;
 			
 			switch (operator) {
 			case "+": result = num1 + num2; break;
@@ -95,13 +94,13 @@ public class SwitchExample {
 			case "/": result = num1 / num2; break;
 			case "%": 
 				if (num2 == 0) {
-					results = "0으로 나눌 수 없습니다.";
+					System.out.println("0으로 나눌 수 없습니다.");
 				}else {
 					result = num1 % num2; break;
 				}
-			default: results = "값을 구할 수 없습니다.";
+			default: System.out.println("값을 구할 수 없습니다.");
 			}
-			System.out.println(num1 + operator + num2 = result);
+			System.out.printf("%d %s %d = %d", num1, operator, num2, result);
 			
 		}
 		
