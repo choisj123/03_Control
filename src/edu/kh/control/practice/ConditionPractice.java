@@ -3,19 +3,31 @@ package edu.kh.control.practice;
 import java.util.Scanner;
 
 public class ConditionPractice { //기능정의용 클래스
+	
 	public void practice1() {
 		
 		Scanner sc = new Scanner(System.in);
 		System.out.print("숫자를 한 개 입력하세요 : ");		
 		int num = sc.nextInt();
 		
-		if (num <= 0) {
+		/*if (num <= 0) {
 			System.out.println("양수만 입력해주세요.");		
 			}else if (num > 0 && num % 2 ==0) {
 				System.out.println("짝수입니다.");
 			}else if (num > 0 && num % 2 !=0) {
 				System.out.println("홀수입니다.");
+			}*/
+	
+		if (num <= 0) {
+			System.out.println("양수만 입력해주세요.");
+		}else {
+			if(num % 2 == 0) {
+				System.out.println("짝수입니다.");
+			}else {
+				System.out.println("홀수입니다.");
 			}
+		}
+		
 		
 	}
 
@@ -30,9 +42,16 @@ public class ConditionPractice { //기능정의용 클래스
 		System.out.print("영어점수 : ");		
 		int math = sc.nextInt();
 		
+		int sum = kor + eng + math;
+		double avg = sum / 3.0;
 		
-		if ((kor >= 40 && eng >= 40 && math >= 40) && ((kor + eng + math/3)>=60)){
-			System.out.println("합격입니다.");
+		if ((kor >= 40 && eng >= 40 && math >= 40) && (avg>=60)){
+			System.out.println("국어: " + kor);
+			System.out.println("수학: " + math);
+			System.out.println("영어: " + eng);
+			System.out.println("합계: " + sum);
+			System.out.printf("평균: %.2f\n" , avg);
+			System.out.println("축하합니다, 합격입니다!");
 		}else {
 			System.out.println("불합격입니다.");		
 			}
@@ -52,18 +71,9 @@ public class ConditionPractice { //기능정의용 클래스
 		
 		
 		switch (month) {
-		case 1 : result = 31; break;
+		case 1 : case 3: case 5: case 7: case 8: case 10: case 12: result = 31; break;
 		case 2 : result = 28; break;
-		case 3 : result = 31; break;
-		case 4 : result = 30; break;
-		case 5 : result = 31; break;
-		case 6 : result = 30; break;
-		case 7 : result = 31; break;
-		case 8 : result = 31; break;
-		case 9 : result = 30; break;
-		case 10 : result = 31; break;
-		case 11 : result = 30; break;
-		case 12 : result = 31; break;
+		case 4 : case 6: case 9: case 11: result = 30; break;
 		default : result = 0;	
 		}
 		
