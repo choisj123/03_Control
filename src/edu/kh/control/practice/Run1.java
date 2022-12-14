@@ -7,9 +7,9 @@ public class Run1 { //실행용 클래스
 		
 		//condition.practice1();
 		//condition.practice2();
-		condition.practice3();
+		//condition.practice3();
 		//condition.practice4();
-		//condition.practice5();
+		condition.practice5();
 		
 
 	}

@@ -89,6 +89,7 @@ public class ConditionPractice { //기능정의용 클래스
 		
 		System.out.print("키(m)를 입력해 주세요: ");		
 		double height = sc.nextDouble();
+		
 		System.out.print("몸무게(kg)를 입력해 주세요: ");		
 		double weight = sc.nextDouble();
 
@@ -113,23 +114,43 @@ public class ConditionPractice { //기능정의용 클래스
 	public void practice5() {
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.print("중간 고사 점수(20) : ");		
-		int midTest = sc.nextInt();
-		System.out.print("기말 고사 점수(30) : ");		
-		int finalTest = sc.nextInt();
-		System.out.print("과제 점수 (30): ");		
-		int homework = sc.nextInt();
-		System.out.print("출석 횟수 (20): ");		
-		int attend = sc.nextInt();
+		System.out.print("중간 고사 점수 : ");		
+		double midTest = sc.nextInt();
+		System.out.print("기말 고사 점수 : ");		
+		double finalTest = sc.nextInt();
+		System.out.print("과제 점수 : ");		
+		double homework = sc.nextInt();
+		System.out.print("출석 횟수 : ");		
+		double attend = sc.nextInt();
 		
-		double score = ((midTest * 0.2) + (finalTest * 0.3) + (homework * 0.3) + (attend * 0.2)); 
-		System.out.println("총점: " + score);
-		if (score >= 70) {
+		midTest *= 0.2;
+		finalTest *= 0.3;
+		homework *= 0.3;
+		attend *= 1;
+		
+		System.out.println("==================결과==============");
+		
+		if (attend <= 20 * (1-0.3)) {
+			System.out.println("Fail [출석 횟수 부족] (" + (int)attend + "/20");
+		}else {
+			System.out.printf("중간 고사 점수(20) : %.1f \n",midTest);
+			System.out.printf("기말 고사 점수(30) : %.1f \n",finalTest);
+			System.out.printf("과제 점수    (30) : %.1f \n",homework);
+			System.out.printf("출석 점수    (20) : %.1f \n",attend);
+		
+		double sum = midTest + finalTest + homework + attend;
+		
+		System.out.printf("총점 : %.1f \n", sum);
+		
+		if (sum >= 70.0) {
 			System.out.println("Pass");
-		}else if (score < 70 || attend >= 6) {
-			System.out.println("Fail");
+		}else {
+			System.out.println("Fail [점수 미달]");
+		}	
+		
 		}
-	
+		
+		
 	}
 
 }
