@@ -35,7 +35,6 @@ public class ConditionExample { //기능 정의용 클래스
 		} else {
 			System.out.println("양수가 아닙니다.");	
 		}
-		
 	}
 		/*if (input <=0) {
 			System.out.println("양수가 아닙니다.");
