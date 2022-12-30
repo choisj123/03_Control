@@ -11,13 +11,13 @@ public class Run2 {
 		//Loop.practice4();
 		//Loop.practice5();
 		//Loop.practice6();
-		//Loop.practice7();
+		Loop.practice7();
 		//Loop.practice8();
 		//Loop.practice9();
 		//Loop.practice10();
 		//Loop.practice11();
 		//Loop.practice12();
-		Loop.practice13();
+		//Loop.practice13();
 
 	}
 
