@@ -17,7 +17,8 @@ public class Run1 { //실행용 클래스
 		//cHome.practice1();
 		//cHome.practice2();
 		//cHome.practice3();
-		cHome.practice4();
+		//cHome.practice4();
+		cHome.practice5();
 	}
 
 }

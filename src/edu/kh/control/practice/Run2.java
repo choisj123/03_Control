@@ -3,7 +3,7 @@ package edu.kh.control.practice;
 public class Run2 {
 
 	public static void main(String[] args) {
-		LoopPractice Loop = new LoopPractice();
+		LoopPracticeAnswer Loop = new LoopPracticeAnswer();
 		
 		//Loop.practice1();
 		//Loop.practice2();

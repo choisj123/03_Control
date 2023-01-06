@@ -2,7 +2,7 @@ package edu.kh.control.practice;
 
 import java.util.Scanner;
 
-public class LoopPractice {
+public class LoopPracticeAnswer {
 
 	public void practice1() {
 		Scanner sc = new Scanner(System.in);

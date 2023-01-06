@@ -1,5 +1,6 @@
 package edu.kh.control.practice;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class ConditionPracticeHome {
@@ -7,6 +8,8 @@ public class ConditionPracticeHome {
 	Scanner sc = new Scanner(System.in);
 	
 	public void practice1() {
+		
+		try {
 		System.out.print("숫자를 한 개 입력하세요 : ");
 		int input = sc.nextInt();
 		
@@ -17,7 +20,10 @@ public class ConditionPracticeHome {
 		} else {
 			System.out.println("홀수입니다.");
 		}
-		
+		}catch(InputMismatchException e) {
+			System.out.println("정수만 입력해주세요.");
+			//e.printStackTrace();
+		}
 		
 	}
 
@@ -87,7 +93,43 @@ public class ConditionPracticeHome {
 			System.out.println("저체중");
 		}
 		
-		
 	}
 
+	public void practice5() {
+		System.out.print("중간 고사 점수 : ");
+		int midTest = sc.nextInt();
+		System.out.print("기말 고사 점수 : ");
+		int finalTest = sc.nextInt();
+		System.out.print("과제 점수 : ");
+		int assignment = sc.nextInt();
+		System.out.print("출석 횟수 : ");
+		double attendance = sc.nextInt();
+		
+		double mid = midTest * 0.2;
+		double finalT = finalTest * 0.3;
+		double assign = assignment * 0.3;
+		double all = (mid + finalT + assign + attendance);
+		
+		System.out.println("=====결과=====");
+
+		if(attendance <= 14 ) {
+			System.out.println("Fail [출석 횟수 부족 (" + (int)attendance + "/20)]");
+			
+		} else if (all < 70) {
+			System.out.println("중간 고사 점수(20) : " + mid);
+			System.out.println("기말 고사 점수(30) : " + finalT);
+			System.out.println("과제 점수		 (30) : " +  assign);
+			System.out.println("출석 점수		 (20) : " + attendance);
+			System.out.println("총점 : " + all);
+			System.out.println("Fail [점수 미달]");
+			
+		} else {
+			System.out.println("중간 고사 점수(20) : " + mid);
+			System.out.println("기말 고사 점수(30) : " + finalT);
+			System.out.println("과제 점수		 (30) : " +  assign);
+			System.out.println("출석 점수		 (20) : " + attendance);
+			System.out.println("총점 : " + all);
+			System.out.println("PASS");
+		}
+	}
 }
