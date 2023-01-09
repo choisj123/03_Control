@@ -174,10 +174,12 @@ public class LoopPracticeService {
 		
 		for(int i = 1; i <= input; i++) {
 			for(int x =1; x <= i; x++) {
+				//System.out.print(x);
+				//System.out.print(i);
 				System.out.print("*");
 			}
 				System.out.println();
-			
+				
 		}
 	}
 	
@@ -186,11 +188,55 @@ public class LoopPracticeService {
 		int input = sc.nextInt();
 		
 		for(int i = input; i >= 1; i--) {
-			for(int x = i; i  ;i--) {
-				
+			for(int x = i; x >= 1; x--) {
+				System.out.print("*");
+				//System.out.print(x);
+				//System.out.print(i);
 			}
-			
+			System.out.println();
+			// 4
 		}
 		
 	}
+	
+	public void practice9() {
+		System.out.print("자연수 하나를 입력하세요 : ");
+		int input = sc.nextInt();
+		
+		int count = 0;
+	
+		for(int i = 1; i <= input; i++) {
+			
+			if(i % 2 == 0 || i % 3 == 0 ) {
+				System.out.print(i + " ");
+				
+				if (i % 2 == 0 && i % 3 == 0) {
+					count ++;
+				}
+			
+			}
+		}
+		System.out.println();
+		System.out.println("count : " + count);
+		
+		
+		
+	}
+	public void practice10() {
+		
+	}
+	public void practice11() {
+		
+		
+	}
+	
+	public void practice12() {
+		
+	}
+	
+	public void practice13() {
+		
+	}
+	
+	
 }
