@@ -172,13 +172,25 @@ public class LoopPracticeService {
 		System.out.print("정수 입력 : ");
 		int input = sc.nextInt();
 		
-		
-		
-		
 		for(int i = 1; i <= input; i++) {
-				
-			System.out.println("*");
+			for(int x =1; x <= i; x++) {
+				System.out.print("*");
+			}
+				System.out.println();
 			
 		}
+	}
+	
+	public void practice8() {
+		System.out.print("정수 입력 : ");
+		int input = sc.nextInt();
+		
+		for(int i = input; i >= 1; i--) {
+			for(int x = i; i  ;i--) {
+				
+			}
+			
+		}
+		
 	}
 }
